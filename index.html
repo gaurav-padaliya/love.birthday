@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday My Love ❤️</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Background decorations -->
+    <div class="lily-container" id="lilyContainer"></div>
+
+    <!-- Gift Photo - Progressive Reveal -->
+    <div class="gift-preview" id="giftPreview">
+        <img src="assets/photos/gift.svg" alt="Your Gift" id="giftImage">
+    </div>
+
+    <!-- Main Container -->
+    <div class="game-container" id="gameContainer">
+
+        <!-- Welcome Screen -->
+        <div class="screen active" id="welcomeScreen">
+            <div class="welcome-content">
+                <h1 class="title-gradient">Happy Birthday</h1>
+                <h2 class="subtitle">My Beautiful Love 💕</h2>
+                <p class="romantic-text">"In a world full of billions, my heart chose only you."</p>
+                <button class="btn-primary" onclick="game.startGame()">Start Your Journey</button>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container" id="progressContainer" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text">Game <span id="currentGame">1</span> of 8</p>
+        </div>
+
+        <!-- Game 1: Tap Hearts -->
+        <div class="screen" id="game1">
+            <div class="game-header">
+                <h2>💕 Tap the Hearts 💕</h2>
+                <p class="game-instruction">Tap each heart to reveal my feelings</p>
+            </div>
+            <div class="hearts-container" id="heartsContainer"></div>
+            <div class="hearts-counter">
+                <p>Hearts Tapped: <span id="heartCount">0</span>/10</p>
+            </div>
+        </div>
+
+        <!-- Game 2: Word Scramble -->
+        <div class="screen" id="game2">
+            <div class="game-header">
+                <h2>🔤 Unscramble the Word 🔤</h2>
+                <p class="game-instruction">What word am I thinking about you?</p>
+            </div>
+            <div class="word-game">
+                <div class="scrambled-word" id="scrambledWord"></div>
+                <div class="letter-buttons" id="letterButtons"></div>
+                <div class="answer-display" id="answerDisplay"></div>
+                <button class="btn-secondary" onclick="game.resetWord()">Reset</button>
+            </div>
+        </div>
+
+        <!-- Game 3: Love Quiz -->
+        <div class="screen" id="game3">
+            <div class="game-header">
+                <h2>💘 Love Quiz 💘</h2>
+                <p class="game-instruction">Answer these questions (hint: it's obvious!)</p>
+            </div>
+            <div class="quiz-container">
+                <div class="question-card" id="questionCard">
+                    <h3 id="questionText"></h3>
+                    <div class="options" id="optionsContainer"></div>
+                </div>
+                <div class="quiz-progress">Question <span id="quizProgress">1</span>/5</div>
+            </div>
+        </div>
+
+        <!-- Game 4: Memory Match -->
+        <div class="screen" id="game4">
+            <div class="game-header">
+                <h2>🎴 Memory Match 🎴</h2>
+                <p class="game-instruction">Match the pairs of our memories</p>
+            </div>
+            <div class="memory-grid" id="memoryGrid"></div>
+            <div class="match-counter">Matches: <span id="matchCount">0</span>/3</div>
+        </div>
+
+        <!-- Game 5: Timeline Sort -->
+        <div class="screen" id="game5">
+            <div class="game-header">
+                <h2>📅 Our Timeline 📅</h2>
+                <p class="game-instruction">Tap two photos to swap them - arrange from oldest to newest!</p>
+            </div>
+            <div class="timeline-container" id="timelineContainer"></div>
+            <button class="btn-primary" onclick="game.checkTimeline()">Check Order</button>
+        </div>
+
+        <!-- Game 6: Complete the Line -->
+        <div class="screen" id="game6">
+            <div class="game-header">
+                <h2>✨ Complete the Love Line ✨</h2>
+                <p class="game-instruction">Fill in the missing word</p>
+            </div>
+            <div class="complete-line-game">
+                <p class="romantic-quote" id="incompleteLine"></p>
+                <div class="word-choices" id="wordChoices"></div>
+            </div>
+        </div>
+
+        <!-- Game 7: Sliding Puzzle -->
+        <div class="screen" id="game7">
+            <div class="game-header">
+                <h2>🧩 Sliding Puzzle 🧩</h2>
+                <p class="game-instruction">Arrange the tiles to complete the picture</p>
+            </div>
+            <div class="puzzle-container" id="puzzleContainer"></div>
+            <div class="puzzle-controls">
+                <p class="shuffle-counter" id="shuffleCount">Shuffled 1 time</p>
+                <button class="btn-secondary" onclick="game.shufflePuzzle()">Shuffle Again</button>
+                <button class="btn-skip" id="puzzleSkipBtn" onclick="game.skipPuzzle()" style="display: none;">
+                    Skip Puzzle ⏭️
+                </button>
+            </div>
+        </div>
+
+        <!-- Game 8: Final Reveal -->
+        <div class="screen" id="game8">
+            <div class="final-reveal">
+                <h2 class="title-gradient">Your Gift Awaits... 🎁</h2>
+                <div class="final-gift-container">
+                    <img src="assets/photos/gift.svg" alt="Your Birthday Gift" class="final-gift-image">
+                </div>
+                <div class="final-message">
+                    <h3>My Dearest Love,</h3>
+                    <p class="heartfelt-message">
+                        They say there are billions of people in this world, but my soul found its home in you.
+                        Every moment with you feels like a beautiful dream I never want to wake up from.
+                        You are not just my girlfriend, you are my peace, my happiness, my everything.
+                        <br><br>
+                        Your smile lights up my darkest days. Your voice is my favorite sound. Your presence is my greatest comfort.
+                        I don't need the whole world when I have you beside me.
+                        <br><br>
+                        On this special day, I want you to know that loving you is the easiest and most beautiful thing I've ever done.
+                        You deserve all the happiness in the universe, and I promise to spend every day trying to give you that.
+                        <br><br>
+                        Happy Birthday to the only girl I will ever love. You are my today and all of my tomorrows.
+                        <br><br>
+                        Forever yours,<br>
+                        Your stupid but deeply in love boy ❤️
+                    </p>
+                </div>
+                <button class="btn-primary" onclick="game.celebrateFinal()">I Love You Too! 💕</button>
+            </div>
+        </div>
+
+        <!-- Celebration Screen -->
+        <div class="screen" id="celebrationScreen">
+            <div class="celebration-content">
+                <h1 class="celebration-title">🎉 Happy Birthday My Queen 🎉</h1>
+                <p class="celebration-text">You complete me in every way possible</p>
+                <div class="floating-hearts-final" id="floatingHeartsFinal"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Audio -->
+    <audio id="bgMusic" loop>
+        <source src="assets/sounds/romantic-music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="successSound">
+        <source src="assets/sounds/success.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/placeholders.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

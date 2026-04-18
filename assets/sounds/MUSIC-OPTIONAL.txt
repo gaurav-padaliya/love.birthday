@@ -1,0 +1,26 @@
+OPTIONAL: Add Background Music
+==============================
+
+To add romantic background music to the game:
+
+1. Find a romantic song (MP3 format)
+   - Could be "your song" together
+   - Or any soft romantic instrumental
+   - Search "romantic background music" on YouTube
+
+2. Name the file: romantic-music.mp3
+
+3. Place it in this folder (assets/sounds/)
+
+4. Optional: Add success.mp3 for game completion sounds
+
+The game will work perfectly fine WITHOUT music!
+Music just adds an extra romantic touch.
+
+Where to get royalty-free music:
+- YouTube Audio Library
+- Pixabay Music
+- Free Music Archive
+- Or use any song you own
+
+Note: The music will loop continuously in the background.

@@ -1,0 +1,101 @@
+🎯 WHAT YOU NEED TO DO BEFORE SENDING
+====================================
+
+Her birthday is TOMORROW (April 19th)! Here's what to customize:
+
+✅ MUST DO (Required):
+--------------------
+1. ADD YOUR PHOTOS to assets/photos/ folder:
+   - photo1.jpg
+   - photo2.jpg
+   - photo3.jpg
+   - photo4.jpg
+   - puzzle.jpg
+   - gift.jpg (THE ACTUAL GIFT PHOTO!)
+
+2. WRITE YOUR HEARTFELT MESSAGE:
+   Open: index.html
+   Find: Line 132-149 (the heartfelt-message section)
+   Replace with: Your own romantic message to her
+
+
+🎨 SHOULD DO (Highly Recommended):
+---------------------------------
+3. CUSTOMIZE ROMANTIC MESSAGES:
+   Open: js/main.js
+   Edit: Lines 10-21 (heartMessages array)
+   Add your own deep Instagram-worthy love lines
+
+4. UPDATE QUIZ QUESTIONS:
+   Open: js/main.js
+   Edit: Lines 33-59 (quizQuestions array)
+   Make them personal to your relationship
+
+5. FIX TIMELINE DATES:
+   Open: js/main.js
+   Edit: Lines 329-334 (timeline array)
+   Add real dates from your relationship
+
+
+💝 NICE TO HAVE (Optional):
+-------------------------
+6. Add background music:
+   - Find a romantic song (MP3)
+   - Save as: romantic-music.mp3
+   - Put in: assets/sounds/ folder
+
+
+📤 HOW TO SEND:
+-------------
+EASIEST: Upload to Netlify Drop (https://app.netlify.com/drop)
+         → Get instant link → Send to her
+
+OR: Zip the folder → Send via WhatsApp/Email
+
+
+🧪 BEFORE SENDING:
+----------------
+□ Test on your phone's browser
+□ Make sure all photos load
+□ Play through all 8 games
+□ Check your final message displays correctly
+□ Have the REAL gift ready for when she finishes!
+
+
+💡 EXAMPLE ROMANTIC LINES YOU CAN USE:
+------------------------------------
+- "In a sea of 8 billion people, my soul found its home in you"
+- "You're not just my girlfriend, you're my entire universe"
+- "I don't need heaven when I'm already living in it with you"
+- "Loving you is like breathing - effortless and essential"
+- "Every love song makes sense only when I think of you"
+- "You're the only story I never want to end"
+- "If I could give you one thing, it would be the ability to see yourself through my eyes"
+
+
+🎮 GAME FLOW REMINDER:
+--------------------
+Game 1: Tap Hearts (10 hearts with messages)
+Game 2: Word Scramble (unscramble romantic words)
+Game 3: Love Quiz (5 obvious questions)
+Game 4: Memory Match (3 pairs)
+Game 5: Timeline (arrange 4 photos)
+Game 6: Complete the Line (fill romantic phrases)
+Game 7: Sliding Puzzle (3x3 tiles - hardest!)
+Game 8: FINAL REVEAL (gift photo + your message!)
+
+Each game makes the gift photo less blurry!
+
+
+❤️ FINAL TIP:
+-----------
+The most important part is your heartfelt message at the end.
+Write from your heart. Be genuine. Tell her exactly how you feel.
+
+She'll love this because it shows:
+- Effort
+- Creativity
+- How much you care
+- All your memories together
+
+GOOD LUCK! 🎂🎉💕

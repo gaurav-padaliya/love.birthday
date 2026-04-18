@@ -1,0 +1,12 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad-quiz4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB6E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD1D3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#grad-quiz4)"/>
+  <text x="200" y="160" font-size="80" text-anchor="middle">🍀</text>
+  <text x="200" y="230" font-size="24" font-family="Arial" fill="white" text-anchor="middle" font-weight="bold">Quiz Photo 4</text>
+  <text x="200" y="270" font-size="18" font-family="Arial" fill="white" text-anchor="middle">Replace Me 📷</text>
+</svg>

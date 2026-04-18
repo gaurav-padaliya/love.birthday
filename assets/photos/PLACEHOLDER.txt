@@ -1,0 +1,23 @@
+PLACEHOLDER IMAGES - REPLACE WITH YOUR PHOTOS
+============================================
+
+You need to add the following images to this folder:
+
+1. photo1.jpg - First memory photo
+2. photo2.jpg - Second memory photo
+3. photo3.jpg - Third memory photo
+4. photo4.jpg - Fourth memory photo (for timeline)
+5. gift.jpg - The birthday gift photo that will be revealed
+6. puzzle.jpg - Photo to be used in the sliding puzzle game
+
+Image Requirements:
+- Format: JPG or PNG
+- Recommended size: 800x800px for best quality
+- Mobile-friendly: Images will auto-scale
+- Gift photo should be the actual gift you're giving her!
+
+NOTE: You can use free online tools like:
+- https://placeholder.com to generate colored placeholders
+- Or just use actual photos from your phone!
+
+For now, the game will show broken images until you add your photos.
