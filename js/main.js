@@ -32,35 +32,40 @@ const game = {
             question: "Who is more stupid in this relationship?",
             options: ["You", "Me", "Both equally", "Me, obviously!"],
             correct: 1,
-            image: 'assets/photos/quiz1.svg',
+            image: 'assets/photos/quiz1.jpeg',
+            emoji: '😅',
             caption: "Yes, I'm the stupid one... but stupidly in love with you! 😅💕"
         },
         {
             question: "Who loves you more than anything in this world?",
             options: ["Everyone", "Your family", "Me, forever", "Your friends"],
             correct: 2,
-            image: 'assets/photos/quiz2.svg',
+            image: 'assets/photos/quiz2.jpeg',
+            emoji: '❤️',
             caption: "Forever and always, it's me! ❤️"
         },
         {
             question: "Who is the most beautiful girl in the universe?",
             options: ["You, my love", "Some celebrity", "Everyone", "Models"],
             correct: 0,
-            image: 'assets/photos/quiz3.svg',
+            image: 'assets/photos/quiz3.jpeg',
+            emoji: '😍',
             caption: "You are breathtakingly beautiful! 😍✨"
         },
         {
             question: "Who is the luckiest person to have you?",
             options: ["Nobody", "Everyone", "Me, always me", "Anyone"],
             correct: 2,
-            image: 'assets/photos/quiz4.svg',
+            image: 'assets/photos/quiz4.jpeg',
+            emoji: '🍀',
             caption: "I'm the luckiest person alive! 🍀💖"
         },
         {
             question: "Whose birthday is the most special day of the year?",
             options: ["Mine", "Random person", "Yours, my queen", "Nobody's"],
             correct: 2,
-            image: 'assets/photos/quiz5.svg',
+            image: 'assets/photos/quiz5.jpeg',
+            emoji: '🎂',
             caption: "Happy Birthday to my queen! 🎂👑💕"
         }
     ],
@@ -365,6 +370,7 @@ const game = {
             <div class="quiz-photo-content">
                 <div class="quiz-photo-image">
                     <img src="${question.image}" alt="Memory">
+                    <div class="quiz-photo-emoji">${question.emoji}</div>
                 </div>
                 <p class="quiz-photo-caption">${question.caption}</p>
             </div>
