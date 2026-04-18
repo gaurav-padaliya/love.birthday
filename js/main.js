@@ -393,15 +393,24 @@ const game = {
         this.flippedCards = [];
 
         // Create cards (3 pairs = 6 cards)
-        const cardImages = [
-            'assets/photos/photo1.svg',
-            'assets/photos/photo2.svg',
-            'assets/photos/photo3.svg'
+        // Each pair has two different photos that go together
+        const cardPairs = [
+            { pair1: 'assets/photos/photo11.jpeg', pair2: 'assets/photos/photo12.jpeg', pairId: 1 },
+            { pair1: 'assets/photos/photo21.jpeg', pair2: 'assets/photos/photo22.jpeg', pairId: 2 },
+            { pair1: 'assets/photos/photo31.jpeg', pair2: 'assets/photos/photo32.jpeg', pairId: 3 }
         ];
 
-        this.memoryCards = [...cardImages, ...cardImages]
+        // Create array with all 6 cards (each pair's two photos)
+        const allCards = [];
+        cardPairs.forEach(pair => {
+            allCards.push({ img: pair.pair1, pairId: pair.pairId });
+            allCards.push({ img: pair.pair2, pairId: pair.pairId });
+        });
+
+        // Shuffle the cards
+        this.memoryCards = allCards
             .sort(() => Math.random() - 0.5)
-            .map((img, index) => ({ img, id: index, matched: false }));
+            .map((card, index) => ({ ...card, id: index, matched: false }));
 
         const grid = document.getElementById('memoryGrid');
         grid.innerHTML = '';
@@ -424,7 +433,11 @@ const game = {
         if (this.flippedCards.length === 2 || cardDiv.classList.contains('flipped')) return;
 
         cardDiv.classList.add('flipped');
-        this.flippedCards.push({ index, cardDiv, img: this.memoryCards[index].img });
+        this.flippedCards.push({
+            index,
+            cardDiv,
+            pairId: this.memoryCards[index].pairId
+        });
 
         if (this.flippedCards.length === 2) {
             setTimeout(() => this.checkMatch(), 800);
@@ -434,7 +447,8 @@ const game = {
     checkMatch() {
         const [card1, card2] = this.flippedCards;
 
-        if (card1.img === card2.img) {
+        // Match if they have the same pairId (photo11 matches photo12, etc.)
+        if (card1.pairId === card2.pairId) {
             card1.cardDiv.classList.add('matched');
             card2.cardDiv.classList.add('matched');
             this.matchedPairs++;
@@ -454,10 +468,10 @@ const game = {
     // ==================== GAME 5: TIMELINE SORT ====================
     initGame5() {
         const timeline = [
-            { img: 'assets/photos/photo1.svg', date: 'First Meet', order: 1 },
-            { img: 'assets/photos/photo2.svg', date: 'First Date', order: 2 },
-            { img: 'assets/photos/photo3.svg', date: 'Our Anniversary', order: 3 },
-            { img: 'assets/photos/photo4.svg', date: 'Recent Memory', order: 4 }
+            { img: 'assets/photos/photo1.jpeg', date: 'my cutiee pie', order: 1 },
+            { img: 'assets/photos/photo2.jpeg', date: 'Awww, how cute', order: 2 },
+            { img: 'assets/photos/photo3.jpeg', date: 'Ufff..!!!', order: 3 },
+            { img: 'assets/photos/photo4.jpeg', date: 'mai hu sonpari', order: 4 }
         ];
 
         this.timelineOrder = timeline.sort(() => Math.random() - 0.5);
