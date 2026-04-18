@@ -171,7 +171,19 @@ const game = {
     startGame() {
         document.getElementById('welcomeScreen').classList.remove('active');
         document.getElementById('progressContainer').style.display = 'block';
-        document.getElementById('giftPreview').classList.add('active');
+
+        // Show gift preview with initial heavy blur
+        const giftPreview = document.getElementById('giftPreview');
+        const giftImage = document.getElementById('giftImage');
+        giftPreview.classList.add('active');
+        giftImage.style.filter = 'blur(30px)';
+
+        // After 5 seconds, reduce to normal starting blur
+        setTimeout(() => {
+            giftImage.style.transition = 'filter 2s ease';
+            giftImage.style.filter = 'blur(20px)';
+        }, 5000);
+
         this.currentGame = 1;
         this.updateProgress();
         this.loadGame(1);
@@ -182,9 +194,11 @@ const game = {
         document.getElementById('progressFill').style.width = progress + '%';
         document.getElementById('currentGame').textContent = this.currentGame;
 
-        // Update gift preview blur
+        // Update gift preview blur (progressive unblur)
         const blurAmount = 20 - (this.gamesCompleted * 2.5);
-        document.getElementById('giftImage').style.filter = `blur(${Math.max(0, blurAmount)}px)`;
+        const giftImage = document.getElementById('giftImage');
+        giftImage.style.transition = 'filter 1s ease';
+        giftImage.style.filter = `blur(${Math.max(0, blurAmount)}px)`;
     },
 
     loadGame(gameNum) {
